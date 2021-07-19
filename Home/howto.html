@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>How To Play</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+  <style>
+    .newbtn {
+      color: #fff;
+      background-color: black;
+      border-color: black
+    }
+
+    .newbtn:hover {
+      color: #fff;
+      background-color: #0069d9;
+      border-color: #0062cc
+    }
+
+    .glyphicon {
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+
+    /* The Modal (background) */
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 80px;
+      padding-left: 600px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.7);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 415px;
+    }
+
+    /* The Close Button */
+
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a href="../Home/index.html">
+        <img src="../img/logo.png" alt="logo face" height="42" style="filter: invert(100%);">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../Available/available.html">Join</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Game Designer/gdCreate.html">Create</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Login/index.html" onclick="signOut()">Sign Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <video autoplay muted loop style="z-index: -1;  opacity: .5;position: fixed; top: 0px; left: 0px; width: 100%; ">
+    <source src="../img/filmreel.mp4" >
+  </video>
+
+
+
+  <main role="main" class="container" style=" margin: 100px auto">
+    <div class="jumbotron" style="padding: 1rem 1rem;">
+
+      <h1 style="color:Black; ">How To Play!</h1>
+      <div id="list">
+        <p><iframe src="howto.txt" frameborder="0" height="400" width="95%"></iframe></p>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+  <script src="../../../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../../../dist/js/bootstrap.min.js"></script>
+  <script src="../../../../assets/js/vendor/holder.min.js"></script>
+  <script>
+    Holder.addTheme('thumb', {
+      bg: '#55595c',
+      fg: '#eceeef',
+      text: 'Thumbnail'
+    });
+  </script>
+</body>
+
+</html>

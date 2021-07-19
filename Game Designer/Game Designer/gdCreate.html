@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!--firebase import -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <script src="../js/login.js"></script>
+  <script src="../js/main.js"></script>
+    <script src="../js/calculation.js"></script>
+  <script src="../js/getRequest.js"></script>
+  <!-- checking if user is logged in -->
+  <script>
+  initializeFirebase();
+  firebase.auth().onAuthStateChanged(user => {
+  if(!user) {
+    window.location = '../Login/login.html'; //If User is not logged in, redirect to login page
+  }
+});
+
+      $(document).ready(function(){
+
+      var username = sessionStorage.getItem('Username');
+      var userRef = firebase.database().ref("Games");
+      userRef.once("value").then(function(snapshot) {
+        snapshot.forEach(function(data) {
+          var budget = data.child('Budgetary').val().username;
+          var creative = data.child('Creative').val().username;
+          var setOps = data.child('SetOperatives').val().username;
+
+        if (budget === username || creative === username || setOps === username){
+          if(data.child('available').val() == false && data.child('completed').val() == false){
+            var endGameTime =  data.child('roundEndTime').val();
+            var pace = data.child('Pace').val();
+            var endTimeToDate = new Date(endGameTime);
+            var finalEndGame = endTimeToDate.getTime();
+            var gameKey = data.key;
+            makeGetRequest(finalEndGame, pace, gameKey);
+          }
+    }
+
+ });
+});
+
+});
+</script>
+
+  <title>Game Create</title>
+  <style>
+  button{
+    color: black;
+  }
+
+    .newbtn {
+      color: #fff;
+      background-color: black;
+      border-color: black
+    }
+
+    .newbtn:hover {
+      color: #fff;
+      background-color: #0069d9;
+      border-color: #0062cc
+    }
+
+    .glyphicon {
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+
+    /* The Modal (background) */
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 80px;
+      padding-left: 600px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.7);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 415px;
+    }
+
+    /* The Close Button */
+
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a href="../Home/index.html">
+        <img src="../img/logo.png" alt="logo face" height="42" style="filter: invert(100%);">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../Home/howto.html">How to Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profileBtn">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Login/index.html" onclick="signOut()">Sign Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <video autoplay muted loop style="z-index: -1;  opacity: .5;position: fixed; top: 0px; left: 0px; width: 100%; ">
+    <source src="../img/filmreel.mp4" >
+  </video>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+
+    <div class="container modal-content">
+      <span style="padding-left: 350px; width: 20px;" class="close">&times;</span>
+      <div class="row" style="height: 40px;">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm" style="width: 70px">
+            <div class="" style="height:40px;">
+              <div style="float: right;" class="col-sm-6 col-md-8">
+                <h4 id="Username">Username</h4>
+                <p>
+                  <br/>
+                  <div class="btn-group">
+
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("profileBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    //Get the Username
+    var playerUsername = sessionStorage.getItem('Username');
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+      getUsername();
+      playerUsername = sessionStorage.getItem('Username');
+      document.getElementById("Username").innerHTML = playerUsername;
+
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+  <main role="main" class="container" style=" margin: 100px auto">
+    <div class="jumbotron">
+      <h1>Creating Game</h1>
+        <form>
+        <div class="col-auto my-1">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Game Title</label>
+          <br>
+          <input type="text" id="title" name="title">
+        </div>
+
+
+        <div class="col-auto my-1">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Number of Weeks</label>
+          <select class="custom-select mr-sm-2" id="weeks" required>
+                        <option selected>Choose...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+        </div>
+
+        <div class="col-auto my-1">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Rounds (per week)</label>
+          <select class="custom-select mr-sm-3" id="rounds" required>
+                        <option selected>Choose...</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        }
+                    </select>
+        </div>
+
+        <input value="Next" type=button class="btn btn-lg btn-primary" style=" margin-top: 25px; color:black;" onclick="saveCreateForm(this.form)">
+
+        </form>
+
+    </div>
+  </main>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="../css/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

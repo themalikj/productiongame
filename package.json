@@ -1,0 +1,35 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "requires": true,
+  "dependencies": {
+    "easytimer.js": "^2.2.1",
+    "express": "^4.16.3",
+    "firebase-admin": "^5.12.0",
+    "getconfig": "^4.4.1",
+    "lightbox2": "^2.10.0",
+    "spin.js": "^3.1.0"
+  },
+  "description": "Capstone Project",
+  "main": "app.js",
+  "scripts": {
+	"build":"node app.js",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ch4c3/ProductionGame-.git"
+  },
+  "author": "Candace Hicks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ch4c3/ProductionGame-/issues"
+  },
+  "homepage": "https://github.com/ch4c3/ProductionGame-#readme",
+  "devDependencies": {},
+  "keywords": [
+    "Check",
+    "the",
+    "Gate"
+  ]
+}

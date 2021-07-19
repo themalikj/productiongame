@@ -1,0 +1,512 @@
+{
+"Events":
+  {
+    "SetOperatives": {
+    "1":
+      {
+        "Description": "You have received word that the grip truck has blown a tire. While some of your production gear is available, the specialty lights that you ordered are on the truck and are now delayed. The Director wants to wait, as the lights are key to an aesthetic. But delays cost money, and mean a longer shooting day. You choose to solve this problem by: ",
+          "Type": "G&E",
+
+        "Option1":
+        {
+          "choice": "using current lights available, and staying on scehdule",
+          "consequences":[1,-1,0]
+
+        },
+          "Option2":
+          {
+            "choice": "reaching out to a friend who owns a production hosue, and renting gear outside your budget.",
+            "consequences": [0,0,-1.5]
+          },
+          "Option3":
+          {
+            "choice": "waiting for the truck to be repaired, delaying your day by 2hrs.",
+            "consequences":[0,0,-1]
+          }
+      },
+
+      "2":
+      {
+        "Description": "Due to nothing under your control, the derector has just come to you and told you that the work you and your team just finished rigging a truck on a trailer must be undone, and that a change is being made to the schedule. Looking back at your crew, this could turn into a mess. After considering your options, you decide to: ",
+        "Type":"G&E",
+
+        "Option1":
+        {
+          "choice": "agree with the director and tell the crew that they have to undo all the work they just did, causing tensions between you and the crew",
+          "consequences":[-1.5,0,0]
+
+        },
+          "Option2":
+          {
+            "choice": "convince the director to go back to the actor and change the schedule to reflect your initial plan, causing tensions",
+            "consequences": [-0.5,-0.5,0]
+          },
+          "Option3":
+          {
+            "choice": "speak to the actor yourself and convince him that it's important we stick to the schedule, causing tensions between you and the director",
+            "consequences":[-1,-1,0]
+          }
+      },
+
+      "3":
+      {
+        "Description": "You've just been contacted by the Gaffer, who has heard from the location you're renting that the manager no longer approves of the equipment being rigged the way they had originally intended. This of course will cause a delay regardless. You still need to make a decision:  ",
+        "Type":"G&E",
+
+        "Option1":
+        {
+          "choice": "Tell the Gaffer that the team will have to find another way to do the appropriate rigging",
+          "consequences":[-0.5,0,0]
+
+        },
+          "Option2":
+          {
+            "choice": "Try to reason with the owner of the space, and assure him that your insurace covers damages",
+            "consequences": [1,0,0]
+          },
+          "Option3":
+          {
+            "choice": "Speak to your budget producer about possibly increasing the payment for the location in compensation",
+            "consequences":[-0.5,0,-1]
+          }
+      },
+      "4":
+      {
+        "Description": "The crew has been working non-stop for the last 10 hours, and they've had one meal. The creative side of things has been lagging behind, and we're now behind schedule. Your crew needs a rest, but you're pushing up against what will inevibibly be overtime. This isn't the best position to be in, but a decision has to be made:",
+        "Type":"G&E",
+
+        "Option1":
+        {
+          "choice": "Talk to the actors, illustrating that the crew needs a break",
+          "consequences":[-0.5,-1,0]
+
+        },
+          "Option2":
+          {
+            "choice": "try and speak to the crew to re-energize them into pushing through the last two hours of the day",
+            "consequences": [-0.5,0,-1.5]
+          },
+          "Option3":
+          {
+            "choice": "Give the crew a 30 minute breather, and inform the director of the delay",
+            "consequences":[1.5,-1,-1.5]
+          }
+      },
+      "5":
+      {
+        "Description": "The cards are stacked against her: there are far too many 'dudes' in the G&E crew, and unfortuantely a rather sexist joke was thrown out, insulting one of the female crewmembers. She's come to you to express her anger at the crew, and how inappropriate it is to allow such behavior. A small break is ahead and all the G&E crew happen to be sitting next to one another. Walk over, and speak your peace:",
+        "Type":"G&E",
+
+        "Option1":
+        {
+          "choice": "Express to the crew the inappropriate behaivor ",
+          "consequences":[-0.5,0,0]
+
+        },
+          "Option2":
+          {
+            "choice": "Express to the crew the inappropriate behavior, and let them know that another instance will result in firings",
+            "consequences": [1,0,0]
+          },
+          "Option3":
+          {
+            "choice": "Express to teh crew that someone spoke to you about inappropriate behavior, and that they need to be careful what they say",
+            "consequences":[-0.5,0,0]
+          }
+      },
+      "6":
+      {
+        "Description": "The costumer would like to set up closer to set, just so they can get instructions faster, and better, from the necessary crew. Having them close does provide you with tigher scheduling. But it's a well know fact that costuming tends to be a chatty part of the behind-the-scenes area. Risk this being a problem, or ask them to remain in their location. It's doubtful it'll impact what the director wants.",
+        "Type":"General",
+
+        "Option1":
+        {
+          "choice": "Dedicate a crew member to be a runner between set and the costuming area to better improve communication, but do not move it closer.",
+          "consequences":[-0.5,0,0]
+
+        },
+          "Option2":
+          {
+            "choice": "Move the costumer closer to the set, to improve the speed of cast to set.",
+            "consequences": [1,0,0]
+          },
+          "Option3":
+          {
+            "choice": "Keep everything as planned and do not move the costumer",
+            "consequences":[0,0,0]
+          }
+      },
+      "7":
+      {
+        "Description": "The director would like a built in day for resting for the crew. While they're not under any specific contract to have a rest day, those rest days can be benefitical. But also consider the impact on the schedule. By doing so, you'll add an additional day to the schedule, and that costs money. A fatigued crew could also cause problems. And certainly a fatigued cast will show on screen. ",
+        "Type":"General",
+        "Option1":
+        {
+          "choice": "Do not deviate from the schedule. You cannot afford the overage cost on an extra day.",
+          "consequences":[-0.5,-1,1]
+
+        },
+          "Option2":
+          {
+            "choice": "Adhere to the director's request for a day off, and work with the production crew to somehow solve the loss in a day.",
+            "consequences": [0,1,-0.5]
+          },
+          "Option3":
+          {
+            "choice": "Work directly with the production crew to find a way to allow for a half day for some rest.",
+            "consequences":[0,0.5,-0.5]
+          }
+      },
+      "8":
+      {
+        "Description": "A rain delay has caused you to evaluate your cover set options. While some are better than others, at least with respect to who is on set, sometimes it makes sense to do a course correction. The rain is going to last all day. Make the call. Which cover set do you want to go with? Choose carefully.",
+        "Type":"General",
+        "Option1":
+        {
+          "choice": "Visually, it makes sense to shoot at the location that's located the greatest distance from your current location.",
+          "consequences":[-1,1,-1]
+
+        },
+          "Option2":
+          {
+            "choice": "For efficiency sake, there's a location down the road you could work on, but the lighting will become a challenge",
+            "consequences": [1,-0.5,1]
+          },
+          "Option3":
+          {
+            "choice": "For cost effectiveness, there's a location you could shoot at, that requires significant setup and costuming changes; It'd be a hard reset to the day, but achievable",
+            "consequences":[-0.5,-0.5,0]
+          }
+      }
+    },
+
+  "Creative": {
+    "1":
+      {
+        "Description": "Lenses. Lenses. Lenses. It's a cost not everyone thinks of. And the DP is eager to work with the new anamorphics out of Canon. But they'll be a rental fee involved with that, and moreover, it leads to a style that might not be perfectly in line with your vision of the film. The director seems to be okay with it. But know that there's always something to consider when it comes to using new technology, and the time it takes to ensure that everything goes right. Given the heads up, you can probably plan for this.",
+
+          "Type": "Camera",
+
+        "Option1":
+        {
+          "choice": "Work with the creative members to find some intermediate option between lenses you own and rented ones",
+          "consequences":[-0.5,0.5,-0.5]
+
+        },
+          "Option2":
+          {
+            "choice": "We're in it to win it: go for the anamorphics, and capture something truly unique.",
+            "consequences": [-1,1,-1]
+          },
+          "Option3":
+          {
+            "choice": "Budget ditctates creativity. You own lenses, and we can get just as good an image if we use those.",
+            "consequences":[1,-0.5,1]
+          }
+      },
+    "2":
+        {
+          "Description": "Cam-Fam - Camera Family - is requesting that a 2nd Camera Operator be brought onto the shoot. While this doesn't impact the visuals of the film, it does have an impact on the efficiency and the cost of things. With another pair of hands, the team can move quicker. But with another crew member on set, the cost increases.",
+
+              "Type": "Camera",
+
+          "Option1":
+          {
+            "choice": "Hire a 2nd C.O. to the team and streamline the time it takes to assemble the camera",
+            "consequences":[1,0,-0.5]
+
+          },
+            "Option2":
+            {
+              "choice": "Budget is too shy, we cannot continue to spend cash in areas that it's not needed.",
+              "consequences": [-0.5,0,1]
+            },
+            "Option3":
+            {
+              "choice": "Express to the Director that a 2nd CO can be brought on board, but at the cost of one of the extra locations that was scheduled at the end of the shoot. Time is more important than extraneous shots.",
+              "consequences":[0,0,-0.5]
+            }
+        },
+        "3":
+            {
+              "Description": "It's nearing the end of your shoot and you've noticed a perfect opportunity to take a photo down by one of your locations. This image could serve as the future poster of your film. The problem is, your actor isn't interested in doing that. He wants to get right to the scene. Crew is setting up in both places, but it's clear you need to decide which one to do, as both locations need more gear...",
+              "Type": "Cast",
+
+              "Option1":
+              {
+                "choice": "Agree with the actor; the film is more important than a still image. Let's get this shoot done. Pictures are for a different day.",
+                "consequences":[1,0,-0.5]
+
+              },
+                "Option2":
+                {
+                  "choice": "The scene is more important, but you still need the picture. Call crew back to the filming location, and explain to them they'll have to set up here, then return and set up for the photo again.",
+                  "consequences": [-0.5,0,0]
+                },
+                "Option3":
+                {
+                  "choice": "The long-term goal of selling this film is important. Send cast and crew to the location to get the shot, then return to film.",
+                  "consequences":[-0.5,0,-0.5]
+                }
+            },
+          "4":
+                {
+                  "Description": "You're about to head into one of the most intense scenes of the film, and your cast appear to be struggling with the choreography of the scene. Time is ticking away, but you know that rushing it could cause problems, both with performance, and with safety. That being said, at this rate, you're looking at double-overtime. You'll need to decide what's more important at this point...",
+                    "Type":"Cast",
+
+                  "Option1":
+                  {
+                    "choice": "This is dangerous; you see it. Call the day, and shoot tomorrow.",
+                    "consequences":[-0.5,-1,-1]
+
+                  },
+                    "Option2":
+                    {
+                      "choice": "To hell with the delays; let's get this done.",
+                      "consequences": [1,1,1]
+                    },
+                    "Option3":
+                    {
+                      "choice": "Push to overtime. Give them the time they need to prepare.",
+                      "consequences":[-0.5,-0.5,-0.5]
+                    }
+                },
+              "5":
+                      {
+                        "Description": "The scene is written one way. The lead actor feels it should go another way. There's a lot of different ways to handle this kind of issue, but time isn't permitting. You'll need to decide how to proceed before tensions on set get too high.",
+                      "Type": "Cast",
+
+                        "Option1":
+                        {
+                          "choice": "Delay the shoot, and adjust the rest of the day so that the director can compromise with the actor, find common ground",
+                          "consequences":[-0.5,0.5,-0.5]
+
+                        },
+                          "Option2":
+                          {
+                            "choice": "Adjust the shoot to allow for filming of both ways of the scene. This will allow for changes in post.",
+                            "consequences": [-1,0.5,-1]
+                          },
+                          "Option3":
+                          {
+                            "choice": "This is our film. Tell the actor that he is under contract and push forward, but risk setting off the actor.",
+                            "consequences":[1,1,1]
+                          }
+                      },
+                  "6":
+                              {
+                                "Description": "Some of your day players have arrived significantly late, and have caused delays. It's early enough in the day that you can make some changes in the schedule, if you want...",
+                              "Type": "Cast",
+
+                                "Option1":
+                                {
+                                  "choice": "Offer them hotels, and put them up for the night, film them tomorrow and you won't have overtime issues today.",
+                                  "consequences":[0,0,-1]
+
+                                },
+                                  "Option2":
+                                  {
+                                    "choice": "Get them moving, and squeeze their scene in as fast as possible. You may not get what you want, but you'll get something that's workable.",
+                                    "consequences": [-0.5,-0.5,0.5]
+                                  },
+                                  "Option3":
+                                  {
+                                    "choice": "Schedule them at the end of the day and make them wait. It was their fault anyway, right? But you're going to have to feed them, and deal with them chatting.",
+                                    "consequences":[0,-0.5,0.5]
+                                  }
+                              },
+                  "7":
+                              {
+                                "Description": "It's petty, but in-fighting has begun between a couple of the lead actors. This can become a very challenging element to manage, given the complexity and the impact long term on the shoot. You've got a lot still to film, and you're beginning to notice that their quarreling is present on screen. This isn't something to be fixed in post production. How would you like your team to approach this?",
+
+                                    "Type": "Cast",
+
+                                "Option1":
+                                {
+                                  "choice": "Delay the day and spend some time working it out with the actors. You'll go overttime, but the problem will be solved.",
+                                  "consequences":[-0.5,0.5,-0.5]
+
+                                },
+                                  "Option2":
+                                  {
+                                    "choice": "Cancel the day; let's figure out what the deal is and start fresh. The footage will look better for it",
+                                    "consequences": [-1,1,-1]
+                                  },
+                                  "Option3":
+                                  {
+                                    "choice": "We don't have time for this. They're professionals. And you can't be wasting money on counseling. Let's get this done and move on.",
+                                    "consequences":[1,-1,1]
+                                  }
+                              }
+    },
+    "Budgetary": {
+      "1":
+          {
+            "Description": "Your crew has taken very well to one of the local restaurants. Morale is always an issue on set. There's an upfront cost to pushing aside the catering plan and letting them get a meal out, but it can have a tremendous ripple-down effect. What do you say boss? Can we spring for a meal out tonight? Keep in mind, it's always a challenge to wrangle all your crew back to set when eating out.",
+
+                "Type": "General",
+
+            "Option1":
+            {
+              "choice": "Stick with your plan and go with the catering that you've already paid for. Keep on your schedule",
+              "consequences":[0,0,1]
+
+            },
+              "Option2":
+              {
+                "choice": "Work with the restaurant to get them to cater to your set. It may cause delays though.",
+                "consequences": [0.5,0.5,0]
+              },
+              "Option3":
+              {
+                "choice": "Give them the meal and deal with the pricetag. Express the importance of getting back to set on time",
+                "consequences":[1,1,-0.5]
+              }
+          },
+          "2":
+              {
+                "Description": "There's a good chance that craft services is going to be late today. The AD, the Director, and the Unit Production Manager should also probably know this. Each will in their own way deal with the issue, and have different people that they'll have to talk to. It's an awful game of telephone though. it won't take long for the entire set to head the news. Who will get the news first? The ones getting the news first usually take it the best...",
+                  "Type": "General",
+
+                "Option1":
+                {
+                  "choice": "Let the AD know so that the crew is aware of the delay first. It'll trickle down from there",
+                  "consequences":[1,-1,-1]
+
+                },
+                  "Option2":
+                  {
+                    "choice": "Let the director know so that the actors are aware of the issue and can adjust accordingly",
+                    "consequences": [-1,1,-1]
+                  },
+                  "Option3":
+                  {
+                    "choice": "Let the management know so that they can make the appropriate scheduling adjustments prior to announcing on set",
+                    "consequences":[-1,-1,1]
+                  }
+              },
+            "3":
+                {
+                  "Description": "Harkening back to the days of the adventure flick, your Director has asked that you move forward with practical effects, and not schedule any time against a green screen. While the green screen costs money, so do the effects. Moreover, green screen studios take time. Practical effects take even longer, and you really only get one shot at it. But when it's done, it's done. You move on. In today's world of digital effects, it's becoming less and less noticible. But the director surely knows.",
+                      "Type": "Budget",
+
+                  "Option1":
+                  {
+                    "choice": "Move forward with the practical effects",
+                    "consequences":[0,1,-0.5]
+
+                  },
+                    "Option2":
+                    {
+                      "choice": "Schedule the green screen room and explain it to the director.",
+                      "consequences":[0,-1,0]
+                    },
+                    "Option3":
+                    {
+                      "choice": "Delay a day and attempt to find some sort of marriage of the two approaches",
+                      "consequences":[-1,-1,-1]
+                    }
+                },
+              "4":
+                  {
+                    "Description": "Insurance is imporant in any case. Risk it and not get the proper coverage and a simple slip up (literally) could cost you thousands (literally). While this decision has no bearing on operations and creative, it's still something that all producers should consider. How much coverage will you get and what will you be wary of.",
+                        "Type": "Budget",
+
+                    "Option1":
+                    {
+                      "choice": "Laibility is the most important. We can swing it with just that.",
+                      "consequences":[0,0,1]
+
+                    },
+                      "Option2":
+                      {
+                        "choice": "Liability and rental insurance is absolutely necessary",
+                        "consequences":[0,0,0]
+                      },
+                      "Option3":
+                      {
+                        "choice": "Liability, rental, and workers compensation is the minimum",
+                        "consequences":[0,0,-0.5]
+                      }
+                  },
+                "5":
+                    {
+                      "Description": "A friend of the AD, a cinematographer, has voiced his eagerness to be a part of your production. And let's face it, she's a talented cinematographer, and her name is well known. But she comes at a price, one far greater than the budget might allow for, at least right now. Further, the director is comfortable with the DP he's working with right now. But he's professional, and can adjust. He's aware of her work, and feels comfortable.",
+
+                        "Type": "Budget",
+
+                      "Option1":
+                      {
+                        "choice": "Negotiate a situation in which the two DPs work together.",
+                        "consequences":[0,-0.5,0]
+
+                      },
+                        "Option2":
+                        {
+                          "choice": "Hire the new DP and work to achieve the best overall image for the film",
+                          "consequences":[0,0,-0.5]
+                        },
+                        "Option3":
+                        {
+                          "choice": "Do not change the decisions made in pre-production and keep the existing crew",
+                          "consequences":[0,1,0]
+                        }
+                    },
+                  "6":
+                      {
+                        "Description": "A beautiful location for sure, the Hillington Hall meets all the visual needs of the director, the impactful imagery of the producers, and the ease of access for the logistics of the shoot. On a base level, it appears to be an ideal location for some of your shoot. There are extras though, which can benefit everyone. You could add on some additional rentals that will give the film a better overall image. Or you could use their on-site catering that will give the crew easy access to food and reduce the wait time between meals. Finally, you could provide the venue with a deal that requires a little bit longer shoot, but reduces the cost of the rental by 10% - provided you shoot them a small commericial. You've got a full day planned ahead. And the venue wants to know what your decision is.",
+
+                            "Type": "Budget",
+
+                        "Option1":
+                        {
+                          "choice": "Add the rentals in an effort to better the image and increase the overall production value",
+                          "consequences":[0,1,-0.5]
+
+                        },
+                          "Option2":
+                          {
+                            "choice": "Do not add anything to the budget; we're tight as it is and extra expenses are not needed",
+                            "consequences":[0,0,0]
+                          },
+                          "Option3":
+                          {
+                            "choice": "Add the catering option which will streamline the production schedule and appease the crew and cast.",
+                            "consequences":[1,0,-0.5]
+                          }
+                      },
+                  "7":
+                      {
+                        "Description": "At the end of the day, it's discovered that the refridgerator was never turned back on, and water has leaked on the floor causing damage to the wood flooring. Each of the main leaders of the shoot have denied being the cause of the damage. The director refused to leave until he had the shot. The AD failed to identify someone as a backup to verify that everything had been reset, and the producer seems to have neglected his duties in securing the right insurance to cover the cost. These three all have the ability to cover the cost of the damage; you can't blame all three. How do you choose to take the fall? They all are at fault, on some level. But someone has to take the hit for your team to move forward.",
+
+                        "Type": "Budget",
+
+                        "Option1":
+                        {
+                          "choice": "Blame the director for his failure to stay on schedule",
+                          "consequences":[0,-1,0]
+
+                        },
+                          "Option2":
+                          {
+                            "choice": "Blame the AD for his iniability to assign a backup member to monitor set changes",
+                            "consequences":[-1,0,0]
+                          },
+                          "Option3":
+                          {
+                            "choice": "Blame the Producer for failing to have the proper coverage to solve this problem.",
+                            "consequences":[0,0,-1]
+                          }
+                      }
+    }
+  },
+
+  "Games": {
+
+
+
+  }
+
+
+
+}

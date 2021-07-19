@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+  <!-- import firebase -->
+  <title>Register</title>
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../css/signin.css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/main.js"></script>
+   <script>
+    initializeFirebase();
+    </script>
+</head>
+
+<body class="text-center">
+  <video autoplay muted loop style="z-index: -1;  opacity: .5;position: fixed; top: 0px; left: 0px; width: 100%; ">
+      <source src="../img/filmreel.mp4" >
+    </video>
+  <form class="form-signin" style="margin-top: auto;">
+    <img class="mb-4" src="../img/logo.png" alt="" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+
+    <label for="inputUsername" class="sr-only">Username</label>
+    <input type="username" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+
+    <label for="inputFirstName" class="sr-only">First Name</label>
+    <input type="firstname" id="firstName" class="form-control" placeholder="First Name" required autofocus>
+
+    <label for="inputLastName" class="sr-only">Last Name</label>
+    <input type="lastname" id="lastName" class="form-control" placeholder="Last Name" required autofocus>
+    <br>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+    <label for="inputConfirmPassword" class="sr-only">Confirm Password</label>
+    <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="Confirm Password" required>
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" style="background-color:hsla(0, 0%, 0%, 0.6);" type="button" onclick="register(this.form)">Register</button>
+    <p class="mt-5 mb-3 text-muted">Already a user? <a href="login.html" style="color: blue;">click here</a></p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+  </form>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>
+
+
+
+</body>
+
+</html>

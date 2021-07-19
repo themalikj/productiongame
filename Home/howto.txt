@@ -1,0 +1,64 @@
+Check The Gate is a role play game that simulates the complexities and the intricacies of the interpersonal
+relationships on a professional film production set.
+
+To enter the website, press the "Play Now" button on the first page. This will take you to the the login
+page, where you'll need to login. To login, enter your email address, enter your password, and then click
+the button marked "Sign In". If you don't already have a username or password, click on the blue words reading
+ "click here" next to the "Not yet a user?" question at the bottom of the page. (If you accidentally click on
+ "click here" but have already registered, and therefore won't need to register again, you can click on the
+ logo above "Register" and you will be taken back to the login page.)
+	For those who need to register, the "click here" button will take you to the "Register" page. Here you
+	need to fill in the blanks. You will be asked to provide:
+A Username
+Your email address
+Your First Name
+Your Last Name
+A password
+A password confirmation
+	After filling this information out, click the "Register" button at the bottom of the page. This will register
+	your information and take you back to the login page where you will then need to login.
+	After logging in, you will be presented with the home page. If at anytime you would like to return to this
+	homepage, you can click the logo on the upper left-hand side. From here you have several options for navigation.
+	If you look at the top right of your screen from the homepage, you will see five options, the last of which
+	is "Sign Out". Click this at anytime to sign out of your profile and return to the landing page. To the left
+	of the "Sign Out" option is "Profile". Clicking on this will give you the information for your account,
+	including your name and your email. Here you are given the option to delete your account.
+	If at any time you would like to know how the game works and how to play it, you can click the "How to Play"
+	option.
+	To join a game, look at the top right portion of your screen where you will see five options: "How to Play",
+	"Join", "Create", "Profile", and "Sign Out". Click on "Join". "Join" will take you to a page that lists the
+	games that are available to play. If there are no games the list will be empty. Available games have a list
+	saying what roles are left to be filled by a player, so if you are looking for a specific role type you will
+	see if it is available in one of the available games. You will also see information regarding the duration,
+	described as weeks, and the pace, described as blitz or real time, of the game.
+Choose a game by clicking the "Join Game" button, and you will be taken to a page where you will choose your
+role for the game. Depending on how many people have signed up for the game already, you will have one, two,
+or three choices available. If all three are available you will get to choose between the Set Operative,
+Creative, and Budgetary role types. If there is only one role left you will not get to choose, you will have
+to take the leftover role. Same with if there are only two roles left, you will have to choose between the two
+options left.
+	After you have chosen a role, click the "Join Game>>" button and you will be added to that game. Clicking
+	this button will also take you back to the homepage, where you will see the game you've been added to under
+	the title "Current Games". If you'd like to start playing, go ahead and click the button that has the name
+	for the game that you want to play at the moment. If you are enrolled in a game but the game doesn't have
+	enough players yet, the game will appear under the "Stand-By" title. When you finish a game, the game will
+	appear under the "Past Games" title.
+ To play the game, choose a game from the "Current Games" list. When you click the button, you will be taken
+ to the question available for you to answer. At the top you will see an information bar with the list of weeks
+ and what round you are on. There is also a bar labeled "Temperament:". This contains your current score for the
+ current game. Click the "Refresh" button to its right see your score.
+To play, read your given scenario and choose the option for response that you would like to give. Click the small
+ circle to the left of your choice, and submit the choice by clicking the button to the right labeled "Submit".
+ This will also take you back to the homepage, where you will see your game under "Current Games". Since games
+  are played in timed rounds, you will not get to answer your next question until the timer is out. If you click
+	to play your game before the next question is available, you will be told that you need to wait.
+To create a game, look at the top right portion of your screen where you will see five options: "How to Play",
+"Join", "Create", "Profile", and "Sign Out". Click on "Create".
+"Create" will take you to a page where you will need to give the game a name, choose how many weeks the game
+should span, and how many rounds a week you want the game to have. After filling these fields, click the "Next"
+button.
+This will take you to a page where you will choose the duration of the game. The options are "Blitz" and "Real
+Time". Blitz will make the game last for two hours, while "Real Time" will make the game last for 24hrs. Make
+your choice, and click "Create Game". You will be taken back to the homepage, where the games you have created
+will show up under "Created Games". A note here: if you have created the game, you will not be allowed to play
+it. You can only play games created by other users.
